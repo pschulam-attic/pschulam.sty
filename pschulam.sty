@@ -1,0 +1,102 @@
+% Setup document style.
+
+\usepackage{times}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage{natbib}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{url}
+\usepackage{microtype}
+\usepackage{todonotes}
+\usepackage{subcaption}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2ex plus 0.5ex minus 0.2ex}
+
+\widowpenalty=1000
+\clubpenalty=1000
+
+% Define macros.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% General macros:
+
+%%% A set comprised of a sequence of integers.
+\newcommand{\rangeset}[2][1]{\ensuremath{
+    \left\{ #1, \ldots, #2 \right\}
+  }
+}
+
+%%% A partial gradient.
+\newcommand{\pgrad}[2][]{\ensuremath{
+    \frac{\partial #1}{\partial #2}
+  }
+}
+
+%%% The inverse of a matrix.
+\newcommand{\matinv}[1]{\ensuremath{
+    #1^{-1}
+  }
+}
+
+%%% The transpose of a matrix or vector.
+\newcommand{\mattra}[1]{\ensuremath{
+    #1^T
+  }
+}
+
+%%% A matrix quadratic form.
+\newcommand{\matquad}[2]{\ensuremath{
+    \mattra{\left( #1 \right)}
+    \matinv{#2} 
+    \left( #1 \right)
+  }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Probability macros:
+
+%%% The density of a random variable.
+\newcommand{\dens}[2][p]{\ensuremath{
+    #1 \left( #2 \right)
+  }
+}
+
+%%% A probability statement.
+\newcommand{\prob}[2][P]{\ensuremath{
+    #1 \left( #2 \right)
+  }
+}
+
+%%% The expected value of a random variable.
+\newcommand{\expval}[2][]{\ensuremath{
+    \mathbb{E}_{#1} \left[ #2 \right]
+  }
+}
+
+%%% The variance of a random variable.
+\newcommand{\variance}[2][]{\ensuremath{
+    \text{Var}_{#1} \left( #2 \right)
+  }
+}
+
+%%% A normal distribution.
+\newcommand{\rnorm}[2]{\ensuremath{
+    \mathcal{N} \left( #1, #2 \right)
+  }
+}
+
+%%% A normal density.
+\newcommand{\dnorm}[3]{\ensuremath{
+    \mathcal{N} \left( #1 ; #2, #3 \right)
+  }
+}
+
+%%% A log likelihood function.
+\newcommand{\loglik}{\ensuremath{
+    \mathcal{L}
+  }
+}
+
